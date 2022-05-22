@@ -18,7 +18,7 @@ class mediModaMediana():
  
 
     def media(self):
-        print(sum(self.valoresEncuesta) / len(self.valoresEncuesta))
+        return(sum(self.valoresEncuesta) / len(self.valoresEncuesta))
     
     def moda(self):
         self.valoresEncuesta.sort()
@@ -27,7 +27,7 @@ class mediModaMediana():
             if self.valoresEncuesta[i] not in frecuencia:
                 frecuencia.append(self.valoresEncuesta[i])
         frecuencia.sort()
-        print(frecuencia[-1])
+        return(frecuencia[-1])
 
     def mediana(self):
         self.valoresEncuesta.sort()
@@ -53,5 +53,19 @@ calculoMedia = tkinter.Label(ventana, text = c.media(), fg = "blue")
 calculoMediaTitulo.grid(row=0, column=0)
 calculoMedia.grid(row=0, column=1)
 
+
+calculoModaTitulo = tkinter.Label(ventana, text = "Cálculo Moda")
+calculoModa = tkinter.Label(ventana, text = c.moda(), fg = "blue")
+calculoModaTitulo.grid(row=1, column=0)
+calculoModa.grid(row=1, column=1)
+
+
+calculoMedianaTitulo = tkinter.Label(ventana, text = "Cálculo Mediana") 
+calculoMediana = tkinter.Label(ventana, text = c.mediana(), fg = "blue")
+calculoMedianaTitulo.grid(row=2, column=0)
+calculoMediana.grid(row=2, column=1)
+
 #ejecuto la ventana
 ventana.mainloop()
+
+
