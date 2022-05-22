@@ -2,11 +2,17 @@ import re
 import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
+import os
 class FormularioRegistro(tk.Tk):
     def __init__(self):
         super().__init__()
         self.inicializar_gui()
         self.definir_patrones_validaciones()
+
+
+
+    def ventana2():
+        os.system('ventana2.py')
 
     def inicializar_gui(self):
         self.title('Validación Datos')
@@ -92,6 +98,9 @@ class FormularioRegistro(tk.Tk):
         
         btn_salir = tk.Button(frm_principal, text='Salir', command=self.salir)
         btn_salir.grid(row=11, column=4)
+
+        btn_media = tk.Button(frm_principal, text='Media',command=self.ventana2)
+        btn_media.grid(row=11, column=5)
 
         # btn_ventana=tk.Button(frm_principal, text='Ventana', command=self.segundaVentana)
         # btn_ventana.grid(row=11, column=5)
@@ -247,4 +256,6 @@ class FormularioRegistro(tk.Tk):
 
 if __name__ == '__main__':
     FormularioRegistro.main()
+
+
 
