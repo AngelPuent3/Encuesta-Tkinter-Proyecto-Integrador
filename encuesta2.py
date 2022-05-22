@@ -11,7 +11,7 @@ class FormularioRegistro(tk.Tk):
 
 
 
-    def ventana2():
+    def ventana2(self):
         os.system('ventana2.py')
 
     def inicializar_gui(self):
@@ -256,6 +256,5 @@ class FormularioRegistro(tk.Tk):
 
 if __name__ == '__main__':
     FormularioRegistro.main()
-
 
 
