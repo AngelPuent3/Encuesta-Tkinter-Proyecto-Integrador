@@ -1,4 +1,4 @@
-import tkinter
+
 
 
 class mediModaMediana():
@@ -39,33 +39,6 @@ class mediModaMediana():
 
 c=mediModaMediana()
 c.media()
-
-
-
-ventana = tkinter.Tk()
-ventana.geometry("400x300")
-
-#cálculo de media
-calculoMediaTitulo = tkinter.Label(ventana, text = "Cálculo Media")
-#calculoMediaTitulo.pack(side = tkinter.TOP)
-calculoMedia = tkinter.Label(ventana, text = c.media(), fg = "blue")
-#calculoMedia.pack(side = tkinter.TOP)
-calculoMediaTitulo.grid(row=0, column=0)
-calculoMedia.grid(row=0, column=1)
-
-
-calculoModaTitulo = tkinter.Label(ventana, text = "Cálculo Moda")
-calculoModa = tkinter.Label(ventana, text = c.moda(), fg = "blue")
-calculoModaTitulo.grid(row=1, column=0)
-calculoModa.grid(row=1, column=1)
-
-
-calculoMedianaTitulo = tkinter.Label(ventana, text = "Cálculo Mediana") 
-calculoMediana = tkinter.Label(ventana, text = c.mediana(), fg = "blue")
-calculoMedianaTitulo.grid(row=2, column=0)
-calculoMediana.grid(row=2, column=1)
-
-#ejecuto la ventana
-ventana.mainloop()
-
+c.moda
+c.mediana
 
