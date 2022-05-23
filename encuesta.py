@@ -90,10 +90,18 @@ class Encuesta(tk.Tk):
         medianaTituloLabel.grid(row=1, column=4 )
         mediana.grid(row=2, column=4)
 
+        medianaTituloLabel = tk.Label(frameMain, text=' ')
+        mediana= tkinter.Label(frameMain, text=" ")
+        medianaTituloLabel.grid(row=1, column=5 )
+        mediana.grid(row=2, column=5)
+
         diagramaTituloLabel = tk.Label(frameMain, text='Diagrama Tallo Hoja:')
-        diagrama= tkinter.Label(frameMain, text=d.imprimirDiagrama())
+        diagrama= tkinter.Listbox(frameMain, text=d.imprimirDiagrama())
+        diagrama.insert(0, d.imprimirDiagrama())
         diagramaTituloLabel.grid(row=3, column=2 )
         diagrama.grid(row=4, column=2)
+
+
 
         # comentario
         # comentarioLabel = tk.Label(frameMain, text='Comentario:')
